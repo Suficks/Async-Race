@@ -1,0 +1,17 @@
+@import '../../shared/styles/mixins';
+
+.filters {
+  @include flex(flex-start, center, 15px, column);
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  @include flex(flex-start, flex-start, 8px);
+}
+
+.color_input {
+  height: 32px;
+  padding: 0;
+
+  cursor: pointer;
+}

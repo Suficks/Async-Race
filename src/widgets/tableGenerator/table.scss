@@ -1,0 +1,61 @@
+@import '../../shared/styles/mixins';
+
+.table {
+  margin: auto;
+  margin-bottom: 30px;
+
+  color: white;
+  text-align: center;
+
+  @include cuprum(20px, 700, 24px);
+}
+
+th,
+td {
+  padding: 5px;
+  border: 1px solid black;
+
+  vertical-align: middle;
+}
+
+td {
+  background-color: rgb(165 165 235);
+}
+
+tr {
+  background-color: rgb(50 50 233);
+}
+
+
+.sort {
+  width: 100px;
+
+  cursor: pointer;
+}
+
+.wins,
+.times {
+  position: relative;
+}
+
+.arrow_up,
+.arrow_down {
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+
+    width: 10px;
+    height: 25px;
+
+    transform: translateY(-50%);
+
+    content: '↑';
+  }
+}
+
+.arrow_down {
+  &::after {
+    content: '↓'
+  }
+}

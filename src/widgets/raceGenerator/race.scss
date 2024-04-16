@@ -1,0 +1,101 @@
+@import '../../shared/styles/mixins';
+
+.race_line {
+  position: relative;
+
+  margin-bottom: 15px;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    border-bottom: 4px dashed #fff;
+
+    color: white;
+
+    content: '';
+  }
+}
+
+.line_wrap {
+  margin-bottom: 10px;
+}
+
+.name {
+  color: rgb(245 236 120);
+}
+
+.controller {
+  width: 30px;
+  padding: 5px;
+  border: 1px solid rgb(245 236 120);
+
+  @include cuprum(20px, 700, 25px);
+
+  color: rgb(245 236 120);
+
+  background-color: transparent;
+
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: transparent;
+    opacity: 0.7;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.stop_btn {
+  border: 1px solid rgb(236 55 55);
+
+  color: rgb(236 55 55);
+}
+
+.car_svg {
+  position: relative;
+  bottom: -10px;
+}
+
+.flag {
+  width: 70px;
+  margin-right: 78px;
+  margin-left: auto;
+}
+
+.disabled_controller {
+  border: 1px solid grey;
+
+  color: grey;
+
+  pointer-events: none;
+}
+
+.winner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  padding: 20px;
+  border-radius: 12px;
+
+  color: #cfc547;
+
+  text-align: center;
+
+  text-shadow: 3px 0 7px rgb(255 196 0 / 80%), 
+      -3px 0 7px rgb(236 134 1 / 80%), 
+      0 4px 7px rgb(105 92 49 / 80%);
+
+  background-color: #d90000;
+
+  transform: translate(-50%, -50%);
+
+  @include cuprum(40px, 700, 45px);
+}

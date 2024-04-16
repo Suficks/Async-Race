@@ -1,0 +1,14 @@
+@import '../../shared/styles/mixins';
+
+.title,
+.page_count {
+  margin-bottom: 15px;
+
+  @include cuprum(32px, 700, 32px);
+
+  color: white;
+}
+
+.page_count {
+  @include cuprum(26px, 700, 32px);
+}
